@@ -132,6 +132,16 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.45);
         }
+        .btn-primary-tech,
+        .btn-primary-tech *,
+        .btn-primary-tech span,
+        .btn-primary-tech i,
+        html.light-mode .btn-primary-tech,
+        html.light-mode .btn-primary-tech *,
+        html.light-mode .btn-primary-tech span,
+        html.light-mode .btn-primary-tech i {
+            color: #FFFFFF !important;
+        }
 
         /* High-Contrast Brand Logo Emblem (Always crisp in Dark & Light) */
         .brand-logo-emblem {
@@ -540,7 +550,8 @@
             background: #F8FAFC !important;
             border-top: 1px solid #E2E8F0 !important;
         }
-        html.light-mode #resume-modal .resume-modal-footer span {
+        html.light-mode #resume-modal .resume-footer-note,
+        html.light-mode #resume-modal .resume-footer-note * {
             color: #64748B !important;
         }
         html.light-mode #resume-modal .resume-copy-btn {
@@ -548,10 +559,30 @@
             border: 1px solid #CBD5E1 !important;
             color: #334155 !important;
         }
+        html.light-mode #resume-modal .resume-copy-btn span {
+            color: #334155 !important;
+        }
         html.light-mode #resume-modal .resume-copy-btn:hover {
             background-color: #F1F5F9 !important;
             color: #0F172A !important;
             border-color: #94A3B8 !important;
+        }
+        html.light-mode #resume-modal .resume-copy-btn:hover span {
+            color: #0F172A !important;
+        }
+        html.light-mode #resume-modal .btn-primary-tech,
+        html.light-mode #resume-modal .btn-primary-tech *,
+        html.light-mode #resume-modal .btn-primary-tech span,
+        html.light-mode #resume-modal .btn-primary-tech i {
+            background-color: #0284C7 !important;
+            color: #FFFFFF !important;
+        }
+        html.light-mode #resume-modal .btn-primary-tech:hover,
+        html.light-mode #resume-modal .btn-primary-tech:hover *,
+        html.light-mode #resume-modal .btn-primary-tech:hover span,
+        html.light-mode #resume-modal .btn-primary-tech:hover i {
+            background-color: #0369A1 !important;
+            color: #FFFFFF !important;
         }
 
         /* Project Deep-Dive Modal in Light Mode */
@@ -2059,7 +2090,7 @@
 
             <!-- Modal Bottom Actions Bar -->
             <div class="resume-modal-footer bg-slate-900/95 px-5 sm:px-7 py-3.5 sm:py-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 shrink-0">
-                <span class="text-xs text-slate-400 hidden sm:inline">
+                <span class="resume-footer-note text-xs text-slate-400 hidden sm:inline">
                     <i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i>Hồ sơ cập nhật: Tháng 10/2026 • Sinh viên Năm cuối UTE-UDN
                 </span>
                 <div class="flex items-center gap-2.5 w-full sm:w-auto justify-end">
