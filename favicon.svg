@@ -1,26 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
-  <defs>
-    <linearGradient id="gradBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06B6D4"/>
-      <stop offset="50%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#10B981"/>
-    </linearGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22D3EE"/>
-      <stop offset="60%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#34D399"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <!-- Background with border -->
-  <rect x="4" y="4" width="120" height="120" rx="32" fill="#090E1A" stroke="url(#gradBorder)" stroke-width="6"/>
-  <!-- Ambient Core Glow -->
-  <circle cx="64" cy="64" r="48" fill="url(#glow)"/>
-  <!-- Monogram TĐ -->
-  <text x="64" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="52" fill="url(#textGrad)" text-anchor="middle" letter-spacing="-1">TĐ</text>
-  <!-- Modern Tech Pulse Dot -->
-  <circle cx="98" cy="38" r="6" fill="#22D3EE"/>
+  <!-- Crisp dark squircle with solid Cyan border -->
+  <rect x="4" y="4" width="120" height="120" rx="32" fill="#090E1A" stroke="#06B6D4" stroke-width="6"/>
+  <!-- High contrast T in pure white, Đ in vivid Cyan -->
+  <text x="44" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="52" fill="#FFFFFF" text-anchor="middle">T</text>
+  <text x="84" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="52" fill="#06B6D4" text-anchor="middle">Đ</text>
 </svg>
