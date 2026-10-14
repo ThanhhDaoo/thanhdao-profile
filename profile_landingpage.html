@@ -318,6 +318,267 @@
             color: #4F46E5 !important;
         }
 
+        /* ========================================================
+           LIGHT MODE: RESUME (CV PREVIEW) & PROJECT MODALS
+           Clean, high-contrast, professional design
+           ======================================================== */
+        html.light-mode #resume-modal,
+        html.light-mode #project-modal {
+            background-color: rgba(15, 23, 42, 0.65) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Modal Dialog Frame */
+        html.light-mode #resume-modal .glass-card,
+        html.light-mode #project-modal .glass-card {
+            background: #FFFFFF !important;
+            border: 1px solid #CBD5E1 !important;
+            box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.3), 0 0 0 1px rgba(15, 23, 42, 0.05) !important;
+        }
+
+        /* Modal Header */
+        html.light-mode .resume-modal-header,
+        html.light-mode #project-modal .glass-card > div:first-child {
+            background: #F8FAFC !important;
+            border-bottom: 1px solid #E2E8F0 !important;
+        }
+        html.light-mode .resume-modal-header h2,
+        html.light-mode #project-modal .glass-card > div:first-child h2 {
+            color: #0F172A !important;
+        }
+        html.light-mode #project-modal #modal-proj-role {
+            color: #0284C7 !important;
+        }
+        html.light-mode .resume-modal-header span.text-slate-400 {
+            color: #64748B !important;
+        }
+        html.light-mode .resume-close-btn,
+        html.light-mode #project-modal button[onclick*="closeProjectModal"] {
+            background-color: #F1F5F9 !important;
+            color: #64748B !important;
+            border: 1px solid #E2E8F0 !important;
+        }
+        html.light-mode .resume-close-btn:hover,
+        html.light-mode #project-modal button[onclick*="closeProjectModal"]:hover {
+            background-color: #FEE2E2 !important;
+            color: #EF4444 !important;
+            border-color: #FECACA !important;
+        }
+
+        /* Resume Modal Scrollable Body */
+        html.light-mode #resume-modal .overflow-y-auto {
+            background-color: #FFFFFF !important;
+            color: #334155 !important;
+        }
+
+        /* Profile Hero Card in Resume Modal */
+        html.light-mode #resume-modal .resume-hero-card {
+            background-image: none !important;
+            background: #F8FAFC !important;
+            border: 1px solid #E2E8F0 !important;
+            box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.04) !important;
+        }
+        html.light-mode #resume-modal .resume-hero-card h3 {
+            color: #0F172A !important;
+        }
+        html.light-mode #resume-modal .resume-hero-card p.text-cyan-400 {
+            color: #0284C7 !important;
+            font-weight: 600;
+        }
+        html.light-mode #resume-modal .resume-hero-card p.text-slate-400 {
+            color: #475569 !important;
+        }
+        html.light-mode #resume-modal .resume-hero-card span.bg-emerald-500\/15 {
+            background-color: #ECFDF5 !important;
+            border-color: #A7F3D0 !important;
+            color: #047857 !important;
+        }
+
+        /* Stat Metric Pills in Hero Card */
+        html.light-mode #resume-modal .resume-stat-gpa {
+            background-color: #F0FDF4 !important;
+            border: 1px solid #BBF7D0 !important;
+        }
+        html.light-mode #resume-modal .resume-stat-gpa span:first-child {
+            color: #475569 !important;
+        }
+        html.light-mode #resume-modal .resume-stat-gpa .text-emerald-400 {
+            color: #059669 !important;
+        }
+        html.light-mode #resume-modal .resume-stat-gpa .text-slate-400 {
+            color: #64748B !important;
+        }
+        html.light-mode #resume-modal .resume-stat-gpa .text-emerald-300 {
+            color: #047857 !important;
+        }
+
+        html.light-mode #resume-modal .resume-stat-credits {
+            background-color: #F0F9FF !important;
+            border: 1px solid #BAE6FD !important;
+        }
+        html.light-mode #resume-modal .resume-stat-credits span:first-child {
+            color: #475569 !important;
+        }
+        html.light-mode #resume-modal .resume-stat-credits .text-cyan-400 {
+            color: #0284C7 !important;
+        }
+        html.light-mode #resume-modal .resume-stat-credits .text-slate-400 {
+            color: #64748B !important;
+        }
+        html.light-mode #resume-modal .resume-stat-credits .text-cyan-300 {
+            color: #0369A1 !important;
+        }
+
+        /* Quick Contact Pills */
+        html.light-mode #resume-modal .resume-contact-pill {
+            background-color: #FFFFFF !important;
+            border: 1px solid #E2E8F0 !important;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+            color: #0F172A !important;
+        }
+        html.light-mode #resume-modal .resume-contact-pill:hover {
+            border-color: #0284C7 !important;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12) !important;
+            transform: translateY(-1px);
+        }
+        html.light-mode #resume-modal .resume-contact-pill span.text-slate-400 {
+            color: #64748B !important;
+        }
+        html.light-mode #resume-modal .resume-contact-pill span.font-bold,
+        html.light-mode #resume-modal .resume-contact-pill span.font-mono {
+            color: #0F172A !important;
+        }
+
+        /* Contact Pill Icon Boxes in Light Mode */
+        html.light-mode #resume-modal .resume-contact-pill .bg-cyan-500\/15 {
+            background-color: #E0F2FE !important;
+            color: #0284C7 !important;
+        }
+        html.light-mode #resume-modal .resume-contact-pill .bg-indigo-500\/15 {
+            background-color: #EEF2FF !important;
+            color: #4F46E5 !important;
+        }
+        html.light-mode #resume-modal .resume-contact-pill .bg-emerald-500\/15 {
+            background-color: #ECFDF5 !important;
+            color: #059669 !important;
+        }
+        html.light-mode #resume-modal .resume-contact-pill .bg-blue-500\/15 {
+            background-color: #EFF6FF !important;
+            color: #2563EB !important;
+        }
+
+        /* Core Competencies Cards */
+        html.light-mode #resume-modal .resume-comp-card {
+            background-color: #F8FAFC !important;
+            border: 1px solid #E2E8F0 !important;
+        }
+        html.light-mode #resume-modal .resume-comp-card span.text-slate-400 {
+            color: #334155 !important;
+            font-weight: 600;
+        }
+        html.light-mode #resume-modal .resume-comp-card span[class*="bg-slate-800"] {
+            background-color: #FFFFFF !important;
+            border: 1px solid #E2E8F0 !important;
+            color: #1E293B !important;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+        }
+        html.light-mode #resume-modal .resume-comp-card span[class*="bg-amber-500"] {
+            background-color: #FFFBEB !important;
+            border: 1px solid #FDE68A !important;
+            color: #B45309 !important;
+        }
+
+        /* 6 Featured Project Cards in Resume Modal */
+        html.light-mode #resume-modal .resume-proj-card {
+            background-color: #FFFFFF !important;
+            border: 1px solid #E2E8F0 !important;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card:hover {
+            border-color: #0284C7 !important;
+            box-shadow: 0 6px 16px -2px rgba(2, 132, 199, 0.1) !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card h5 {
+            color: #0F172A !important;
+            font-weight: 700;
+        }
+        html.light-mode #resume-modal .resume-proj-card p {
+            color: #475569 !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card .bg-cyan-500\/10 {
+            background-color: #F0F9FF !important;
+            color: #0284C7 !important;
+            border: 1px solid #BAE6FD !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card .bg-indigo-500\/10 {
+            background-color: #EEF2FF !important;
+            color: #4F46E5 !important;
+            border: 1px solid #C7D2FE !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card .bg-slate-800 {
+            background-color: #F8FAFC !important;
+            color: #475569 !important;
+            border: 1px solid #E2E8F0 !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card .bg-emerald-500\/10 {
+            background-color: #ECFDF5 !important;
+            color: #059669 !important;
+            border: 1px solid #A7F3D0 !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card .bg-amber-500\/10 {
+            background-color: #FFFBEB !important;
+            color: #D97706 !important;
+            border: 1px solid #FDE68A !important;
+        }
+        html.light-mode #resume-modal .resume-proj-card .text-slate-500 {
+            color: #94A3B8 !important;
+        }
+
+        /* Resume Modal Bottom Actions Bar */
+        html.light-mode #resume-modal .resume-modal-footer {
+            background: #F8FAFC !important;
+            border-top: 1px solid #E2E8F0 !important;
+        }
+        html.light-mode #resume-modal .resume-modal-footer span {
+            color: #64748B !important;
+        }
+        html.light-mode #resume-modal .resume-copy-btn {
+            background-color: #FFFFFF !important;
+            border: 1px solid #CBD5E1 !important;
+            color: #334155 !important;
+        }
+        html.light-mode #resume-modal .resume-copy-btn:hover {
+            background-color: #F1F5F9 !important;
+            color: #0F172A !important;
+            border-color: #94A3B8 !important;
+        }
+
+        /* Project Deep-Dive Modal in Light Mode */
+        html.light-mode #project-modal #modal-proj-content {
+            background: #FFFFFF !important;
+            color: #334155 !important;
+        }
+        html.light-mode #project-modal [class*="bg-dark-950"]:not(pre) {
+            background-color: #F8FAFC !important;
+            border: 1px solid #E2E8F0 !important;
+            color: #334155 !important;
+        }
+        html.light-mode #project-modal pre {
+            background-color: #090E1A !important;
+            border-color: #334155 !important;
+            color: #34D399 !important;
+        }
+        html.light-mode #project-modal button[onclick="closeProjectModal()"]:not(button:has(i.fa-xmark)) {
+            background-color: #FFFFFF !important;
+            border: 1px solid #CBD5E1 !important;
+            color: #334155 !important;
+        }
+        html.light-mode #project-modal button[onclick="closeProjectModal()"]:not(button:has(i.fa-xmark)):hover {
+            background-color: #F1F5F9 !important;
+            color: #0F172A !important;
+        }
+
         /* Scrollbars in Light Mode */
         html.light-mode ::-webkit-scrollbar-track {
             background: #F1F5F9;
@@ -1542,7 +1803,7 @@
         <div class="glass-card w-full max-w-4xl rounded-2xl sm:rounded-3xl border border-slate-700/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden my-auto max-h-[92vh] flex flex-col">
             
             <!-- Modal Header Bar -->
-            <div class="bg-slate-900/95 px-5 sm:px-7 py-3.5 sm:py-4 border-b border-slate-800 flex items-center justify-between shrink-0">
+            <div class="resume-modal-header bg-slate-900/95 px-5 sm:px-7 py-3.5 sm:py-4 border-b border-slate-800 flex items-center justify-between shrink-0">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-sm">
                         <i class="fa-solid fa-file-contract"></i>
@@ -1554,7 +1815,7 @@
                         <span class="text-[11px] text-slate-400 block sm:inline">Software Engineer &amp; IT Business Analyst</span>
                     </div>
                 </div>
-                <button onclick="closeResumeModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-rose-500 hover:text-white text-slate-400 flex items-center justify-center transition-colors">
+                <button onclick="closeResumeModal()" class="resume-close-btn w-8 h-8 rounded-lg bg-slate-800 hover:bg-rose-500 hover:text-white text-slate-400 flex items-center justify-center transition-colors">
                     <i class="fa-solid fa-xmark text-sm"></i>
                 </button>
             </div>
@@ -1563,7 +1824,7 @@
             <div class="p-5 sm:p-7 overflow-y-auto space-y-6 text-slate-300 text-xs sm:text-sm">
                 
                 <!-- Profile Hero Card -->
-                <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-dark-950 border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+                <div class="resume-hero-card p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-dark-950 border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
                     <div class="flex items-start gap-4">
                         <!-- Monogram Avatar -->
                         <div class="brand-logo-emblem w-14 h-14 sm:w-16 sm:h-16 rounded-2xl border shrink-0 shadow-lg shadow-cyan-500/20 flex items-center justify-center font-black text-lg sm:text-xl">
@@ -1586,12 +1847,12 @@
 
                     <!-- Highlight Metric Pills -->
                     <div class="grid grid-cols-2 lg:flex items-center gap-3 shrink-0">
-                        <div class="p-3 sm:px-4 sm:py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-center min-w-[110px]">
+                        <div class="resume-stat-pill resume-stat-gpa p-3 sm:px-4 sm:py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-center min-w-[110px]">
                             <span class="text-[10px] text-slate-300 uppercase font-mono tracking-wider block">GPA Tích lũy</span>
                             <div class="font-mono text-xl sm:text-2xl font-extrabold text-emerald-400 leading-tight">3.51<span class="text-slate-400 text-xs font-normal">/4.0</span></div>
                             <span class="text-[10px] font-medium text-emerald-300">Khá - Giỏi</span>
                         </div>
-                        <div class="p-3 sm:px-4 sm:py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-center min-w-[110px]">
+                        <div class="resume-stat-pill resume-stat-credits p-3 sm:px-4 sm:py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-center min-w-[110px]">
                             <span class="text-[10px] text-slate-300 uppercase font-mono tracking-wider block">Tiến độ tín chỉ</span>
                             <div class="font-mono text-xl sm:text-2xl font-extrabold text-cyan-400 leading-tight">116<span class="text-slate-400 text-xs font-normal">/132</span></div>
                             <span class="text-[10px] font-medium text-cyan-300">Đạt ~88%</span>
@@ -1601,7 +1862,7 @@
 
                 <!-- Quick Contact Info Pills Bar -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
-                    <a href="https://zalo.me/0362625218" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
+                    <a href="https://zalo.me/0362625218" target="_blank" rel="noopener noreferrer" class="resume-contact-pill p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
                         <div class="w-8 h-8 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-phone text-xs"></i>
                         </div>
@@ -1610,7 +1871,7 @@
                             <span class="font-mono font-bold truncate block">0362625218</span>
                         </div>
                     </a>
-                    <a href="mailto:tranthanhdao82@gmail.com" class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
+                    <a href="mailto:tranthanhdao82@gmail.com" class="resume-contact-pill p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
                         <div class="w-8 h-8 rounded-lg bg-indigo-500/15 text-indigo-400 flex items-center justify-center shrink-0">
                             <i class="fa-regular fa-envelope text-xs"></i>
                         </div>
@@ -1619,7 +1880,7 @@
                             <span class="font-mono font-bold truncate block">tranthanhdao82@gmail.com</span>
                         </div>
                     </a>
-                    <a href="https://github.com/ThanhhDaoo" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
+                    <a href="https://github.com/ThanhhDaoo" target="_blank" rel="noopener noreferrer" class="resume-contact-pill p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
                         <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0">
                             <i class="fa-brands fa-github text-sm"></i>
                         </div>
@@ -1628,7 +1889,7 @@
                             <span class="font-mono font-bold truncate block">ThanhhDaoo</span>
                         </div>
                     </a>
-                    <a href="https://www.facebook.com/share/19kbQnscqp/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
+                    <a href="https://www.facebook.com/share/19kbQnscqp/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="resume-contact-pill p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 flex items-center gap-2.5 transition-all text-slate-300 hover:text-white">
                         <div class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center shrink-0">
                             <i class="fa-brands fa-facebook text-sm"></i>
                         </div>
@@ -1642,7 +1903,7 @@
                 <!-- 2-Column Core Competencies Grid with Badges -->
                 <div class="grid md:grid-cols-2 gap-4">
                     <!-- Backend & Mobile -->
-                    <div class="p-4 sm:p-5 rounded-2xl bg-dark-950/80 border border-slate-800 space-y-3.5">
+                    <div class="resume-comp-card p-4 sm:p-5 rounded-2xl bg-dark-950/80 border border-slate-800 space-y-3.5">
                         <div class="flex items-center gap-2 text-cyan-400 font-bold text-xs uppercase tracking-wider">
                             <i class="fa-solid fa-code text-sm"></i>
                             <span>Năng lực Lập trình &amp; Kiến trúc Phần mềm</span>
@@ -1676,7 +1937,7 @@
                     </div>
 
                     <!-- BA & System Modeling -->
-                    <div class="p-4 sm:p-5 rounded-2xl bg-dark-950/80 border border-slate-800 space-y-3.5">
+                    <div class="resume-comp-card p-4 sm:p-5 rounded-2xl bg-dark-950/80 border border-slate-800 space-y-3.5">
                         <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
                             <i class="fa-solid fa-diagram-project text-sm"></i>
                             <span>Phân tích Nghiệp vụ (BA) &amp; Trí tuệ Nhân tạo</span>
@@ -1721,7 +1982,7 @@
 
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                         <!-- Project 1 -->
-                        <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-cyan-500/40 transition-all space-y-1.5">
+                        <div class="resume-proj-card p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-cyan-500/40 transition-all space-y-1.5">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] font-mono text-cyan-400 font-semibold px-2 py-0.5 rounded bg-cyan-500/10">Spring Boot • AI</span>
                                 <span class="text-[10px] font-mono text-slate-500">#01</span>
@@ -1733,7 +1994,7 @@
                         </div>
 
                         <!-- Project 2 -->
-                        <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-indigo-500/40 transition-all space-y-1.5">
+                        <div class="resume-proj-card p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-indigo-500/40 transition-all space-y-1.5">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] font-mono text-indigo-400 font-semibold px-2 py-0.5 rounded bg-indigo-500/10">Flutter • AI Sprint</span>
                                 <span class="text-[10px] font-mono text-slate-500">#02</span>
@@ -1745,7 +2006,7 @@
                         </div>
 
                         <!-- Project 3 -->
-                        <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-slate-600 transition-all space-y-1.5">
+                        <div class="resume-proj-card p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-slate-600 transition-all space-y-1.5">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] font-mono text-slate-300 font-semibold px-2 py-0.5 rounded bg-slate-800">.NET • SQL Server</span>
                                 <span class="text-[10px] font-mono text-slate-500">#03</span>
@@ -1757,7 +2018,7 @@
                         </div>
 
                         <!-- Project 4 -->
-                        <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-emerald-500/40 transition-all space-y-1.5">
+                        <div class="resume-proj-card p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-emerald-500/40 transition-all space-y-1.5">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] font-mono text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10">BA • PlantUML</span>
                                 <span class="text-[10px] font-mono text-slate-500">#04</span>
@@ -1769,7 +2030,7 @@
                         </div>
 
                         <!-- Project 5 -->
-                        <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-amber-500/40 transition-all space-y-1.5">
+                        <div class="resume-proj-card p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-amber-500/40 transition-all space-y-1.5">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] font-mono text-amber-400 font-semibold px-2 py-0.5 rounded bg-amber-500/10">BA • SQL Job</span>
                                 <span class="text-[10px] font-mono text-slate-500">#05</span>
@@ -1781,7 +2042,7 @@
                         </div>
 
                         <!-- Project 6 -->
-                        <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-emerald-500/40 transition-all space-y-1.5">
+                        <div class="resume-proj-card p-3.5 rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-emerald-500/40 transition-all space-y-1.5">
                             <div class="flex items-center justify-between">
                                 <span class="text-[10px] font-mono text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10">BA • 3NF Design</span>
                                 <span class="text-[10px] font-mono text-slate-500">#06</span>
@@ -1797,13 +2058,13 @@
             </div>
 
             <!-- Modal Bottom Actions Bar -->
-            <div class="bg-slate-900/95 px-5 sm:px-7 py-3.5 sm:py-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 shrink-0">
+            <div class="resume-modal-footer bg-slate-900/95 px-5 sm:px-7 py-3.5 sm:py-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 shrink-0">
                 <span class="text-xs text-slate-400 hidden sm:inline">
                     <i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i>Hồ sơ cập nhật: Tháng 10/2026 • Sinh viên Năm cuối UTE-UDN
                 </span>
                 <div class="flex items-center gap-2.5 w-full sm:w-auto justify-end">
                     <button onclick="copyContactInfo('Trần Thanh Đạo - GPA 3.51/4.0 (116 Tín chỉ) ĐH SPKT Đà Nẵng | Java Spring Boot, Flutter, Swift, BA | SĐT/Zalo: 0362625218 | Email: tranthanhdao82@gmail.com | GitHub: https://github.com/ThanhhDaoo | Facebook: Thanh Đạo', 'Đã sao chép tóm tắt Hồ sơ vào Clipboard!')" 
-                            class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs border border-slate-700 flex items-center gap-2 transition-all">
+                            class="resume-copy-btn px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-medium text-xs border border-slate-700 flex items-center gap-2 transition-all">
                         <i class="fa-regular fa-copy text-cyan-400"></i>
                         <span>Sao chép Tóm tắt</span>
                     </button>
