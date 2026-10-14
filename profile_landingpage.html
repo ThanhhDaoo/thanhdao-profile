@@ -142,6 +142,15 @@
         html.light-mode .btn-primary-tech i {
             color: #FFFFFF !important;
         }
+        .btn-primary-tech *,
+        .btn-primary-tech span,
+        .btn-primary-tech i,
+        .btn-primary-tech:hover *,
+        .btn-primary-tech:hover span,
+        .btn-primary-tech:hover i {
+            background: transparent !important;
+            background-color: transparent !important;
+        }
 
         /* High-Contrast Brand Logo Emblem (Always crisp in Dark & Light) */
         .brand-logo-emblem {
@@ -559,6 +568,13 @@
             border: 1px solid #CBD5E1 !important;
             color: #334155 !important;
         }
+        html.light-mode #resume-modal .resume-copy-btn *,
+        html.light-mode #resume-modal .resume-copy-btn span,
+        html.light-mode #resume-modal .resume-copy-btn:hover *,
+        html.light-mode #resume-modal .resume-copy-btn:hover span {
+            background: transparent !important;
+            background-color: transparent !important;
+        }
         html.light-mode #resume-modal .resume-copy-btn span {
             color: #334155 !important;
         }
@@ -570,19 +586,27 @@
         html.light-mode #resume-modal .resume-copy-btn:hover span {
             color: #0F172A !important;
         }
-        html.light-mode #resume-modal .btn-primary-tech,
-        html.light-mode #resume-modal .btn-primary-tech *,
-        html.light-mode #resume-modal .btn-primary-tech span,
-        html.light-mode #resume-modal .btn-primary-tech i {
+        html.light-mode #resume-modal .btn-primary-tech {
             background-color: #0284C7 !important;
+            background-image: none !important;
             color: #FFFFFF !important;
         }
-        html.light-mode #resume-modal .btn-primary-tech:hover,
+        html.light-mode #resume-modal .btn-primary-tech:hover {
+            background-color: #0369A1 !important;
+            background-image: none !important;
+            color: #FFFFFF !important;
+        }
+        html.light-mode #resume-modal .btn-primary-tech *,
+        html.light-mode #resume-modal .btn-primary-tech span,
+        html.light-mode #resume-modal .btn-primary-tech i,
         html.light-mode #resume-modal .btn-primary-tech:hover *,
         html.light-mode #resume-modal .btn-primary-tech:hover span,
         html.light-mode #resume-modal .btn-primary-tech:hover i {
-            background-color: #0369A1 !important;
+            background: transparent !important;
+            background-color: transparent !important;
             color: #FFFFFF !important;
+            box-shadow: none !important;
+            border: none !important;
         }
 
         /* Project Deep-Dive Modal in Light Mode */
