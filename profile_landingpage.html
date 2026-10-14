@@ -18,6 +18,20 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
 
+    <!-- Color Scheme & Theme Initialization (FOUC Prevention) -->
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('theme');
+                var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+                    document.documentElement.classList.add('light-mode');
+                }
+            } catch(e) {}
+        })();
+    </script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -129,6 +143,168 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #06B6D4;
         }
+
+        /* ================= LIGHT MODE THEME ================= */
+        html.light-mode {
+            color-scheme: light;
+        }
+        html.light-mode body {
+            background-color: #F8FAFC !important;
+            color: #1E293B !important;
+        }
+        html.light-mode .bg-tech-grid {
+            background-image: 
+                linear-gradient(to right, rgba(148, 163, 184, 0.22) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(148, 163, 184, 0.22) 1px, transparent 1px) !important;
+        }
+
+        /* Ambient Glowing Orbs in Light Mode */
+        html.light-mode .fixed.top-10.left-10 {
+            background-color: rgba(6, 182, 212, 0.08) !important;
+        }
+        html.light-mode .fixed.bottom-10.right-10 {
+            background-color: rgba(99, 102, 241, 0.08) !important;
+        }
+        html.light-mode .fixed.top-1\/2 {
+            background-color: rgba(16, 185, 129, 0.06) !important;
+        }
+
+        /* Glassmorphism & Panels in Light Mode */
+        html.light-mode .glass-panel {
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-color: rgba(226, 232, 240, 0.9) !important;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+        }
+        html.light-mode .glass-card:not(.dark-code-window) {
+            background: #FFFFFF !important;
+            border-color: #E2E8F0 !important;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04) !important;
+        }
+        html.light-mode .glass-card:not(.dark-code-window):hover {
+            border-color: rgba(6, 182, 212, 0.6) !important;
+            box-shadow: 0 16px 32px -8px rgba(6, 182, 212, 0.12) !important;
+        }
+
+        /* Preserve Dark Code Editor Window in Light Mode */
+        html.light-mode .dark-code-window {
+            background: #090E1A !important;
+            border-color: #334155 !important;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25) !important;
+        }
+
+        /* Comprehensive Section & Container Backgrounds in Light Mode */
+        html.light-mode section[class*="bg-dark-"]:not(.dark-code-window),
+        html.light-mode section[class*="bg-slate-"]:not(.dark-code-window),
+        html.light-mode div[class*="bg-dark-900"]:not(.glass-card):not(.dark-code-window):not(.dark-code-window *),
+        html.light-mode div[class*="bg-slate-900"]:not(.glass-card):not(.dark-code-window):not(.dark-code-window *) {
+            background-color: #F8FAFC !important;
+        }
+
+        /* Inner Accent Boxes & Stat Pills in Light Mode */
+        html.light-mode [class*="bg-dark-950"]:not(.dark-code-window):not(.dark-code-window *),
+        html.light-mode [class*="bg-slate-950"]:not(.dark-code-window):not(.dark-code-window *) {
+            background-color: #F1F5F9 !important;
+            border-color: #E2E8F0 !important;
+            color: #334155 !important;
+        }
+
+        /* Borders in Light Mode */
+        html.light-mode [class*="border-slate-800"]:not(.dark-code-window):not(.dark-code-window *),
+        html.light-mode [class*="border-slate-700"]:not(.dark-code-window):not(.dark-code-window *) {
+            border-color: #E2E8F0 !important;
+        }
+
+        /* Chips, pills, tags, filter buttons in Light Mode */
+        html.light-mode [class*="bg-slate-800"]:not(.dark-code-window):not(.dark-code-window *) {
+            background-color: #F1F5F9 !important;
+            color: #334155 !important;
+            border-color: #E2E8F0 !important;
+        }
+        html.light-mode .proj-filter-btn:not(.bg-cyan-500) {
+            background-color: #FFFFFF !important;
+            color: #475569 !important;
+            border: 1px solid #E2E8F0 !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+        }
+
+        /* Typography in Light Mode */
+        html.light-mode h1, 
+        html.light-mode h2, 
+        html.light-mode h3, 
+        html.light-mode h4,
+        html.light-mode .text-white:not(.btn-primary-tech):not(.btn-primary-tech *):not(.dark-code-window *):not(.bg-cyan-500 *):not(.bg-emerald-500 *) {
+            color: #0F172A !important;
+        }
+        html.light-mode .text-slate-200:not(.dark-code-window *),
+        html.light-mode .text-slate-300:not(.dark-code-window *) {
+            color: #334155 !important;
+        }
+        html.light-mode .text-slate-400:not(.dark-code-window *) {
+            color: #64748B !important;
+        }
+
+        /* High-contrast accessible text accents in Light Mode */
+        html.light-mode [class*="text-cyan-400"]:not(.dark-code-window *),
+        html.light-mode [class*="text-cyan-300"]:not(.dark-code-window *) {
+            color: #0284C7 !important;
+        }
+        html.light-mode [class*="text-emerald-400"]:not(.dark-code-window *),
+        html.light-mode [class*="text-emerald-300"]:not(.dark-code-window *) {
+            color: #059669 !important;
+        }
+        html.light-mode [class*="text-indigo-400"]:not(.dark-code-window *),
+        html.light-mode [class*="text-indigo-300"]:not(.dark-code-window *) {
+            color: #4F46E5 !important;
+        }
+        html.light-mode [class*="text-amber-400"]:not(.dark-code-window *),
+        html.light-mode [class*="text-amber-300"]:not(.dark-code-window *) {
+            color: #D97706 !important;
+        }
+        html.light-mode [class*="text-rose-400"]:not(.dark-code-window *),
+        html.light-mode [class*="text-rose-300"]:not(.dark-code-window *) {
+            color: #E11D48 !important;
+        }
+
+        /* Form Inputs in Light Mode */
+        html.light-mode input,
+        html.light-mode textarea,
+        html.light-mode select {
+            background-color: #FFFFFF !important;
+            border-color: #CBD5E1 !important;
+            color: #0F172A !important;
+        }
+        html.light-mode input::placeholder,
+        html.light-mode textarea::placeholder {
+            color: #94A3B8 !important;
+        }
+
+        /* Role switcher inactive buttons in Light Mode */
+        html.light-mode .role-btn:not(.bg-cyan-500) {
+            background-color: #F1F5F9 !important;
+            color: #475569 !important;
+            border-color: #E2E8F0 !important;
+        }
+
+        /* Theme Toggle Button in Light Mode */
+        html.light-mode #theme-toggle-btn,
+        html.light-mode #theme-toggle-mobile-btn {
+            background-color: #F1F5F9 !important;
+            border-color: #CBD5E1 !important;
+            color: #4F46E5 !important;
+        }
+
+        /* Scrollbars in Light Mode */
+        html.light-mode ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        html.light-mode ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+        }
+        html.light-mode ::-webkit-scrollbar-thumb:hover {
+            background: #06B6D4;
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden bg-tech-grid relative">
@@ -168,6 +344,10 @@
 
                 <!-- Action Buttons -->
                 <div class="hidden sm:flex items-center gap-3">
+                    <!-- Theme Toggle Button (Desktop) -->
+                    <button id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Chuyển chế độ Sáng / Tối" title="Chuyển sang Chế độ Sáng" class="w-10 h-10 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-amber-400 border border-slate-700 flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-105">
+                        <i id="theme-toggle-icon" class="fa-solid fa-sun text-base transition-transform duration-300"></i>
+                    </button>
                     <button onclick="openResumeModal()" class="px-4 py-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all">
                         <i class="fa-regular fa-file-lines text-cyan-400"></i>
                         <span>Xem CV Tóm tắt</span>
@@ -178,10 +358,15 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
-                    <i class="fa-solid fa-bars text-2xl"></i>
-                </button>
+                <!-- Mobile Action Area -->
+                <div class="flex items-center gap-2 lg:hidden">
+                    <button id="theme-toggle-mobile-btn" onclick="toggleTheme()" aria-label="Chuyển chế độ Sáng / Tối" title="Chuyển sang Chế độ Sáng" class="w-9 h-9 rounded-lg bg-slate-800/90 text-amber-400 border border-slate-700 flex items-center justify-center transition-all">
+                        <i id="theme-toggle-mobile-icon" class="fa-solid fa-sun text-sm"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -290,7 +475,7 @@
 
                 <!-- Right Column: Interactive Terminal / IDE Profile Window -->
                 <div class="lg:col-span-5">
-                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl">
+                    <div class="glass-card dark-code-window rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl">
                         <!-- IDE Title Bar -->
                         <div class="bg-slate-900 px-3 sm:px-4 py-2.5 sm:py-3 border-b border-slate-800 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
                             <div class="hidden sm:flex items-center gap-1.5 shrink-0">
@@ -1979,8 +2164,94 @@
             e.target.reset();
         }
 
+        // 10. Light / Dark Mode Toggle Logic
+        function initTheme() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                const isLight = savedTheme === 'light' || (!savedTheme && prefersLight);
+                
+                if (isLight) {
+                    document.documentElement.classList.add('light-mode');
+                    updateThemeUI(true);
+                } else {
+                    document.documentElement.classList.remove('light-mode');
+                    updateThemeUI(false);
+                }
+            } catch(e) {
+                console.error('Theme init error', e);
+            }
+        }
+
+        function toggleTheme() {
+            const isCurrentlyLight = document.documentElement.classList.contains('light-mode');
+            const nextThemeIsLight = !isCurrentlyLight;
+            
+            if (nextThemeIsLight) {
+                document.documentElement.classList.add('light-mode');
+                try { localStorage.setItem('theme', 'light'); } catch(e) {}
+            } else {
+                document.documentElement.classList.remove('light-mode');
+                try { localStorage.setItem('theme', 'dark'); } catch(e) {}
+            }
+            
+            updateThemeUI(nextThemeIsLight);
+            
+            // Show toast feedback
+            const toast = document.getElementById('copy-toast');
+            const toastText = document.getElementById('copy-toast-text');
+            if (toast && toastText) {
+                toastText.textContent = nextThemeIsLight ? '☀️ Đã bật Chế độ Sáng (Light Mode)' : '🌙 Đã bật Chế độ Tối (Dark Mode)';
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 2500);
+            }
+        }
+
+        function updateThemeUI(isLight) {
+            const desktopIcon = document.getElementById('theme-toggle-icon');
+            const mobileIcon = document.getElementById('theme-toggle-mobile-icon');
+            const desktopBtn = document.getElementById('theme-toggle-btn');
+            const mobileBtn = document.getElementById('theme-toggle-mobile-btn');
+            
+            if (desktopIcon) {
+                desktopIcon.className = isLight ? 'fa-solid fa-moon text-indigo-500 text-base' : 'fa-solid fa-sun text-amber-400 text-base';
+            }
+            if (mobileIcon) {
+                mobileIcon.className = isLight ? 'fa-solid fa-moon text-indigo-500 text-sm' : 'fa-solid fa-sun text-amber-400 text-sm';
+            }
+            if (desktopBtn) {
+                desktopBtn.title = isLight ? 'Chuyển sang Chế độ Tối (Dark Mode)' : 'Chuyển sang Chế độ Sáng (Light Mode)';
+                desktopBtn.setAttribute('aria-label', desktopBtn.title);
+            }
+            if (mobileBtn) {
+                mobileBtn.title = isLight ? 'Chuyển sang Chế độ Tối' : 'Chuyển sang Chế độ Sáng';
+                mobileBtn.setAttribute('aria-label', mobileBtn.title);
+            }
+        }
+
+        // Listen for OS theme preference changes
+        try {
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+                if (!localStorage.getItem('theme')) {
+                    if (e.matches) {
+                        document.documentElement.classList.add('light-mode');
+                        updateThemeUI(true);
+                    } else {
+                        document.documentElement.classList.remove('light-mode');
+                        updateThemeUI(false);
+                    }
+                }
+            });
+        } catch(e) {}
+
+        // Immediate theme initialization
+        initTheme();
+
         // Start typewriter on window load
         window.onload = function() {
+            initTheme();
             typeLoop();
         };
     </script>
